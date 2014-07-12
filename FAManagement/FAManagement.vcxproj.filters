@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\Common">
+      <UniqueIdentifier>{3148d35f-035f-41e5-8820-3943db7b4cd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\MFC">
+      <UniqueIdentifier>{5fab7a26-6988-40eb-b3d7-d3605d0f0d84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Common">
+      <UniqueIdentifier>{ab932c80-fea3-4a07-a670-822f18fce6f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\MFC">
+      <UniqueIdentifier>{1d88ab9c-9f67-4c83-acb9-7417fbf31fe6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\MFC\UserNoticeDlg">
+      <UniqueIdentifier>{fc21e65a-c510-4ff6-ab95-01c1b6970449}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\MFC\UserNoticeDlg">
+      <UniqueIdentifier>{6015c8bf-38d0-4ebd-882b-7af9b99e4540}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Function">
+      <UniqueIdentifier>{63a8651d-8812-4230-a50c-306e13beb9bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Function\UserNotice">
+      <UniqueIdentifier>{80a98325-1d2a-4c35-a313-b47c7f6e5d56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Function\PacketFilter">
+      <UniqueIdentifier>{bff6e34f-350c-4e48-bc42-6773ce56d38b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Function\TaryIcon">
+      <UniqueIdentifier>{0ec89372-990a-4cab-933e-ab88e140320f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Function\FileSystemWatcher">
+      <UniqueIdentifier>{eec393f1-466b-4284-ac09-93177a5aeebe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Function\DB">
+      <UniqueIdentifier>{980d1416-720c-4714-9ba6-31e26d378ab1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Function">
+      <UniqueIdentifier>{ad3b8ffb-5110-4e81-88fe-ea57a12b4570}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Function\UserNotice">
+      <UniqueIdentifier>{2827e027-ba6b-4c2e-9d2a-1739078669ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Function\PacketFilter">
+      <UniqueIdentifier>{bccf3c09-f6c4-4233-b332-e515a004728f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Function\TaryIcon">
+      <UniqueIdentifier>{e6221c47-8e82-4d01-a4e9-448df0323eaf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Function\FileSystemWatcher">
+      <UniqueIdentifier>{4ea3ee09-7dfa-41a7-a7b7-47489996c275}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Function\DB">
+      <UniqueIdentifier>{a928be70-34ee-4d8d-92c8-97dfd701f4ff}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FAManagement.h">
+      <Filter>헤더 파일\MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="FAManagementDlg.h">
+      <Filter>헤더 파일\MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>헤더 파일\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="DBConnector.h">
+      <Filter>헤더 파일\Function\DB</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystemWatcher.h">
+      <Filter>헤더 파일\Function\FileSystemWatcher</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystemEvent.h">
+      <Filter>헤더 파일\Function\FileSystemWatcher</Filter>
+    </ClInclude>
+    <ClInclude Include="TaryIconConMgr.h">
+      <Filter>헤더 파일\Function\TaryIcon</Filter>
+    </ClInclude>
+    <ClInclude Include="divert.h">
+      <Filter>헤더 파일\Function\PacketFilter</Filter>
+    </ClInclude>
+    <ClInclude Include="divert_device.h">
+      <Filter>헤더 파일\Function\PacketFilter</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketFilter.h">
+      <Filter>헤더 파일\Function\PacketFilter</Filter>
+    </ClInclude>
+    <ClInclude Include="UserNoticeDlg.h">
+      <Filter>헤더 파일\MFC\UserNoticeDlg</Filter>
+    </ClInclude>
+    <ClInclude Include="UserNotice.h">
+      <Filter>헤더 파일\Function\UserNotice</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>소스 파일\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="FAManagement.cpp">
+      <Filter>소스 파일\MFC</Filter>
+    </ClCompile>
+    <ClCompile Include="FAManagementDlg.cpp">
+      <Filter>소스 파일\MFC</Filter>
+    </ClCompile>
+    <ClCompile Include="DBConnector.cpp">
+      <Filter>소스 파일\Function\DB</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystemWatcher.cpp">
+      <Filter>소스 파일\Function\FileSystemWatcher</Filter>
+    </ClCompile>
+    <ClCompile Include="TaryIconConMgr.cpp">
+      <Filter>소스 파일\Function\TaryIcon</Filter>
+    </ClCompile>
+    <ClCompile Include="PacketFilter.cpp">
+      <Filter>소스 파일\Function\PacketFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="UserNoticeDlg.cpp">
+      <Filter>소스 파일\MFC\UserNoticeDlg</Filter>
+    </ClCompile>
+    <ClCompile Include="UserNotice.cpp">
+      <Filter>소스 파일\Function\UserNotice</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="FAManagement.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\FAManagement.rc2">
+      <Filter>리소스 파일</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\FAManagement.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\FA.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\lib\LOGIN.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\lib\NOTICE.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
