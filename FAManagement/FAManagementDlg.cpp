@@ -274,8 +274,8 @@ void CFAManagementDlg::OnBnClickedOk()
 		m_FSW.StartThread((char*)CT2CA(uid));
 
 		//공지 사항
-		//m_Un.SetInit(GetSafeHwnd(), uid);
-		//m_Un.StartThread();
+		m_Un.SetInit(GetSafeHwnd(), uid);
+		m_Un.StartThread();
 
 		SetDlgItemText(IDC_EDIT1, _T(""));
 		SetDlgItemText(IDC_EDIT2, _T(""));
