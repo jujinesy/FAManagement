@@ -344,8 +344,7 @@ void PacketFilter::Run()
 					}
 					fprintf(fr,"%.2X ", test[i]);
 				}
-				//패킷 오류 수정
-				//fprintf(fr,"\n↑↑↑↑↑↑↑↑↑↑↑복사 후 패킷↑↑↑↑↑↑↑↑↑↑↑\n\n\n");
+				fprintf(fr,"\n↑↑↑↑↑↑↑↑↑↑↑복사 후 패킷↑↑↑↑↑↑↑↑↑↑↑\n\n\n");
 
 
 
