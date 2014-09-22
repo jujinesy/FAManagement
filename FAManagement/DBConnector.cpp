@@ -250,7 +250,7 @@ BOOL CDBConnector::FileLog(
 				//`NO_SCRUB_DATA` VARCHAR(3) NULL,
 				//`MD5_HASH` VARCHAR(200) NULL) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 				
-				//주석 추가
+				//주석
 				New_file_name = Old_file_path.Mid(Old_file_path.ReverseFind('\\')+1, Old_file_path.GetLength());
 				New_file_name = New_file_path.Mid(New_file_path.ReverseFind('\\')+1, New_file_path.GetLength());
 
