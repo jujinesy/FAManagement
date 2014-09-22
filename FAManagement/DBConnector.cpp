@@ -113,7 +113,7 @@ BOOL CDBConnector::dbConnector()
 	catch(sql::SQLException &e)
 	{
 		errNo = e.getErrorCode();
-		AfxMessageBox(_T("Error! Code: %d"), errNo);
+		AfxMessageBox(_T("Test Error! Code: %d"), errNo);
 	}
 	return true;
 }
@@ -129,7 +129,7 @@ BOOL CDBConnector::login(CString Id, CString Pw)
 		driver = get_driver_instance();
 		if(driver)
 		{
-			con = driver->connect("localhost", "root", "aaaaaa");
+			con = driver->connect("192.168.0.254", "root", "aaaaaa");
 			con->setSchema("SGdb");
 			if(con)
 			{
@@ -163,7 +163,7 @@ BOOL CDBConnector::login(CString Id, CString Pw)
 	catch(sql::SQLException &e)
 	{
 		errNo = e.getErrorCode();
-		AfxMessageBox(_T("Error! Code: %d"), errNo);
+		AfxMessageBox(_T("login Error! Code: %d"), errNo);
 		return false;
 	}	
 	return false;
@@ -202,8 +202,8 @@ BOOL CDBConnector::FileLog(
 		if(driver)
 		{
 			
-			con = driver->connect("localhost", "root", "aaaaaa");
-			con->setSchema("fadb");
+			con = driver->connect("192.168.0.254", "root", "aaaaaa");
+			con->setSchema("FAdb");
 			if(con)
 			{
 				char str1[1000]="";
@@ -250,23 +250,8 @@ BOOL CDBConnector::FileLog(
 				//`NO_SCRUB_DATA` VARCHAR(3) NULL,
 				//`MD5_HASH` VARCHAR(200) NULL) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 				
-				for( int i =0 ; ; i++) {
-					AfxExtractSubString(Old_file_name, Old_file_path, i+1, '\\');
-					if(!Old_file_name.Compare((LPCTSTR)""))
-					{
-						AfxExtractSubString(Old_file_name, Old_file_path, i, '\\');
-						break;
-					}
-				}
-
-				for( int i =0 ; ; i++) {
-					AfxExtractSubString(New_file_name, New_file_path, i+1, '\\');
-					if(!New_file_name.Compare((LPCTSTR)""))
-					{
-						AfxExtractSubString(New_file_name, New_file_path, i, '\\');
-						break;
-					}
-				}
+				New_file_name = Old_file_path.Mid(Old_file_path.ReverseFind('\\')+1, Old_file_path.GetLength());
+				New_file_name = New_file_path.Mid(New_file_path.ReverseFind('\\')+1, New_file_path.GetLength());
 
 				pstmt->setString(column++, (char*)CT2CA(Uid));
 				pstmt->setString(column++, (char*)CW2A(Event_type));
@@ -305,7 +290,7 @@ BOOL CDBConnector::FileLog(
 	catch(sql::SQLException &e)
 	{
 		errNo = e.getErrorCode();
-		AfxMessageBox(_T("Error! Code: %d"), errNo);
+		AfxMessageBox(_T("FileLog Error! Code: %d"), errNo);
 		return false;
 	}	
 	return false;
@@ -318,7 +303,7 @@ BOOL CDBConnector::GetNotice(CListCtrl* pList, CString Uid, BOOL ALL)
 		driver = get_driver_instance();
 		if(driver)
 		{
-			con = driver->connect("localhost", "root", "aaaaaa");
+			con = driver->connect("192.168.0.254", "root", "aaaaaa");
 			con->setSchema("FAdb");
 			if(con)
 			{
@@ -398,7 +383,7 @@ BOOL CDBConnector::GetNotice(CListCtrl* pList, CString Uid, BOOL ALL)
 	catch(sql::SQLException &e)
 	{
 		errNo = e.getErrorCode();
-		AfxMessageBox(_T("Error! Code: %d"), errNo);
+		AfxMessageBox(_T("GetNotice Error! Code: %d"), errNo);
 		return false;
 	}	
 	if(pList==0)
@@ -413,7 +398,7 @@ BOOL CDBConnector::ReadNotice(CString IDX, CString UID)
 		driver = get_driver_instance();
 		if(driver)
 		{
-			con = driver->connect("localhost", "root", "aaaaaa");
+			con = driver->connect("192.168.0.254", "root", "aaaaaa");
 			con->setSchema("FAdb");
 			if(con)
 			{
@@ -433,7 +418,7 @@ BOOL CDBConnector::ReadNotice(CString IDX, CString UID)
 	catch(sql::SQLException &e)
 	{
 		errNo = e.getErrorCode();
-		AfxMessageBox(_T("Error! Code: %d"), errNo);
+		AfxMessageBox(_T("ReadNotice Error! Code: %d"), errNo);
 		return false;
 	}	
 	return true;
@@ -446,7 +431,7 @@ BOOL CDBConnector::GetFlag(CString Id)
 		driver = get_driver_instance();
 		if(driver)
 		{
-			con = driver->connect("localhost", "root", "aaaaaa");
+			con = driver->connect("192.168.0.254", "root", "aaaaaa");
 			con->setSchema("SGdb");
 			if(con)
 			{
@@ -473,7 +458,7 @@ BOOL CDBConnector::GetFlag(CString Id)
 	catch(sql::SQLException &e)
 	{
 		errNo = e.getErrorCode();
-		AfxMessageBox(_T("Error! Code: %d"), errNo);
+		AfxMessageBox(_T("Get Flag Error! Code: %d"), errNo);
 		return false;
 	}	
 	return false;

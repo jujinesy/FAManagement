@@ -261,8 +261,8 @@ void CFAManagementDlg::OnBnClickedOk()
 	CString Pw;
 	GetDlgItemText(IDC_EDIT1, uid);
 	GetDlgItemText(IDC_EDIT2, Pw);
-	//if(m_Db.login(uid, Pw)) {
-	if(1){
+	if(m_Db.login(uid, Pw)) {
+	//if(1){
 		//AfxMessageBox(_T("로그인 되었습니다."));
 		m_Loginbit=TRUE;
 		PostMessage (WM_SHOWWINDOW, FALSE, SW_OTHERUNZOOM); 
@@ -274,8 +274,8 @@ void CFAManagementDlg::OnBnClickedOk()
 		m_FSW.StartThread((char*)CT2CA(uid));
 
 		//공지 사항
-		m_Un.SetInit(GetSafeHwnd(), uid);
-		m_Un.StartThread();
+		//m_Un.SetInit(GetSafeHwnd(), uid);
+		//m_Un.StartThread();
 
 		SetDlgItemText(IDC_EDIT1, _T(""));
 		SetDlgItemText(IDC_EDIT2, _T(""));
