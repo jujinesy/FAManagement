@@ -261,8 +261,8 @@ void CFAManagementDlg::OnBnClickedOk()
 	CString Pw;
 	GetDlgItemText(IDC_EDIT1, uid);
 	GetDlgItemText(IDC_EDIT2, Pw);
-	if(m_Db.login(uid, Pw)) {
-	//if(1){
+	//if(m_Db.login(uid, Pw)) {
+	if(1){
 		//AfxMessageBox(_T("로그인 되었습니다."));
 		m_Loginbit=TRUE;
 		PostMessage (WM_SHOWWINDOW, FALSE, SW_OTHERUNZOOM); 

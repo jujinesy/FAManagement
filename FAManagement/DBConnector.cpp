@@ -202,7 +202,7 @@ BOOL CDBConnector::FileLog(
 		if(driver)
 		{
 			
-			con = driver->connect("192.168.0.254", "root", "aaaaaa");
+			con = driver->connect("localhost", "root", "aaaaaa");
 			con->setSchema("FAdb");
 			if(con)
 			{
@@ -303,7 +303,7 @@ BOOL CDBConnector::GetNotice(CListCtrl* pList, CString Uid, BOOL ALL)
 		driver = get_driver_instance();
 		if(driver)
 		{
-			con = driver->connect("192.168.0.254", "root", "aaaaaa");
+			con = driver->connect("192.168.0.1", "root", "aaaaaa");
 			con->setSchema("FAdb");
 			if(con)
 			{

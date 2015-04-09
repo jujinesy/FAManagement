@@ -9,28 +9,28 @@ struct AttributesParam
 	AttributesParam(){};
 	CString READONLY;
 	CString HIDDEN;
-	CString SYSTEM; 
+	CString SYSTEM;
 	CString DIRECTORY;
-	CString ARCHIVE; 
-	CString DEVICE; 
-	CString NORMAL; 
-	CString TEMPORARY; 
-	CString SPARSE_FILE; 
-	CString REPARSE_POINT; 
+	CString ARCHIVE;
+	CString DEVICE;
+	CString NORMAL;
+	CString TEMPORARY;
+	CString SPARSE_FILE;
+	CString REPARSE_POINT;
 	CString COMPRESSED;
-	CString OFFLINE; 
-	CString NOT_CONTENT_INDEXED; 
-	CString ENCRYPTED; 
-	CString INTEGRITY_STREAM; 
-	CString VIRTUAL; 
+	CString OFFLINE;
+	CString NOT_CONTENT_INDEXED;
+	CString ENCRYPTED;
+	CString INTEGRITY_STREAM;
+	CString VIRTUAL;
 	CString NO_SCRUB_DATA;
 };
 
 class CFileSystemWatcher
 {
-	public:
+public:
 
-	typedef void (*PFN_EVENT_HANDLER)(const CFileSystemEvent& args);
+	typedef void(*PFN_EVENT_HANDLER)(const CFileSystemEvent& args);
 
 private:
 	struct MONITOR;
@@ -41,7 +41,7 @@ private:
 
 
 public:
-	std::string       m_WatcherUid;	
+	std::string       m_WatcherUid;
 	CFileSystemWatcher();
 	CFileSystemWatcher(const std::string& directory);
 	virtual ~CFileSystemWatcher();
@@ -66,27 +66,27 @@ private:
 	static void CALLBACK FileSystemWatcherCallback(DWORD, DWORD, LPOVERLAPPED);
 
 public:
-    void StartThread(std::string Uid);  
-	void StopThread();  
-    //virtual void Run()=0;     
+	void StartThread(std::string Uid);
+	void StopThread();
+	//virtual void Run()=0;     
 	virtual void Run();
-                //자식 클래스들이 자신들의 용도에 맞게 구현하도록 한다  
+	//자식 클래스들이 자신들의 용도에 맞게 구현하도록 한다  
 
-    static UINT WINAPI Update(LPVOID parameter);  
-  
+	static UINT WINAPI Update(LPVOID parameter);
 
-public:  
-    HANDLE m_ThreadHandle;          //스레드 핸들  
-    //DWORD m_ThreadID;               //스레드 아이디 
+
+public:
+	HANDLE m_ThreadHandle;          //스레드 핸들  
+	//DWORD m_ThreadID;               //스레드 아이디 
 	unsigned int m_ThreadID;               //스레드 아이디 
 	int StopBit;
-    enum 
-    {  
-        LIFE_DEF,  
-        LIFE_LIVE,  
-        LIFE_TERMINATE,  
-    };  
-    char m_cLife;                   //스레드의 상태  
+	enum
+	{
+		LIFE_DEF,
+		LIFE_LIVE,
+		LIFE_TERMINATE,
+	};
+	char m_cLife;                   //스레드의 상태  
 };
 
 void OnFileCreate(const CFileSystemEvent& evt);
@@ -94,5 +94,3 @@ void OnFileChange(const CFileSystemEvent& evt);
 void OnFileDelete(const CFileSystemEvent& evt);
 void OnFileRename(const CFileSystemEvent& evt);
 struct AttributesParam* ShowAttributes(DWORD attrib);
-
-

@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#pragma comment( lib, "res/lib/WinDivert.lib")
+//#pragma comment( lib, "res/lib/WinDivert.lib")
 
 
 FILE *fr;

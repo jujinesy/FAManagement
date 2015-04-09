@@ -4,7 +4,7 @@
 class CFileSystemEvent
 {
 public:
-	enum ChangeType 
+	enum ChangeType
 	{
 		CREATED,
 		CHANGED,

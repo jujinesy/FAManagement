@@ -72,13 +72,15 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>D:\Program Files\boost_1_54_0\boost_1_54_0;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\Program Files\boost_1_54_0\boost_1_54_0\libs;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)\FAManagement\res\boost_1_55_0;C:\Program Files\MySQL\MySQL Server 5.6\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\FAManagement\res\boost_1_55_0\libs;C:\Program Files\MySQL\MySQL Server 5.6\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>D:\Program Files\MySQL\MySQL Server 5.6\include;D:\Program Files\boost_1_55_0\boost_1_55_0;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\Program Files\MySQL\MySQL Server 5.6\lib;D:\Program Files\boost_1_55_0\boost_1_55_0\libs;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)\FAManagement\res\boost_1_55_0\boost_1_55_0;$(SolutionDir)\FAManagement\res\include\include\MySQL\Connector C++ 1.1.3\include\cppconn;$(SolutionDir)\FAManagement\res\include\include\MySQL\Connector C++ 1.1.3\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\FAManagement\res\boost_1_55_0\boost_1_55_0\libs;$(SolutionDir)\FAManagement\res\include\lib\WinDivert;$(SolutionDir)\FAManagement\res\include\lib\MySQL\Connector C++ 1.1.3\lib\opt;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -94,12 +96,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Program Files\MySQL\MySQL Connector C++ 1.1.3\include;C:\Program Files\MySQL\MySQL Connector C++ 1.1.3\include\cppconn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files\MySQL\Connector C++ 1.1.3\include;C:\Program Files\MySQL\Connector C++ 1.1.3\include\cppconn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Program Files\MySQL\MySQL Connector C++ 1.1.3\lib\opt;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Program Files\MySQL\Connector C++ 1.1.3\lib\opt;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -118,13 +120,16 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Program Files\MySQL\Connector C++ 1.1.3\include;D:\Program Files\MySQL\Connector C++ 1.1.3\include\cppconn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>D:\Program Files\MySQL\Connector C++ 1.1.3\lib\opt;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>mysqlcppconn.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <AdditionalDependencies>mysqlcppconn.lib;WinDivert.lib</AdditionalDependencies>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
