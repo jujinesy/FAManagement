@@ -5,10 +5,8 @@
 *.sln.docstates
 
 # Build results
-[Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
-x64/
 build/
 bld/
 [Bb]in/
@@ -209,3 +207,5 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 /FAManagement/res/boost_1_55_0/boost_1_55_0
+/FAManagement/x64/Debug/FAManagement.tlog
+/FAManagement/x64/Debug
